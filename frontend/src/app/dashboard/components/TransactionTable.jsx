@@ -1,7 +1,13 @@
+"use client"
+import {useState,React} from "react";
 import { Eye, ShieldX, Check } from "lucide-react";
 import { transactions } from "./data";
+import TransactionModal from "./TransactionModal";
+
 export default function TransactionTable() {
+    const [selectedTxn, setSelectedTxn] = useState(null);
   return (
+    <>
     <div className="bg-white rounded-xl shadow overflow-x-auto">
       <table className="min-w-full text-sm">
         <thead>
@@ -31,7 +37,7 @@ export default function TransactionTable() {
                 </span>
               </td>
               <td className="p-3 flex gap-2">
-                <Eye className="w-4 h-4 cursor-pointer text-blue-600" />
+                <Eye className="w-4 h-4 cursor-pointer text-blue-600" onClick={() => setSelectedTxn(txn)} />
                 <Check className="w-4 h-4 cursor-pointer text-green-600" />
                 <ShieldX className="w-4 h-4 cursor-pointer text-red-600" />
               </td>
@@ -40,5 +46,7 @@ export default function TransactionTable() {
         </tbody>
       </table>
     </div>
+     <TransactionModal transaction={selectedTxn} onClose={() => setSelectedTxn(null)} />
+    </>
   );
 }
