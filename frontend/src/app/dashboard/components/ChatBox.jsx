@@ -1,5 +1,5 @@
 import { Send } from "lucide-react";
-import {messages} from "./data"
+import {messages} from "../../../components/data"
 export default function ChatBox() {
   return (
     <div className="bg-white mt-6 rounded-xl shadow p-4">

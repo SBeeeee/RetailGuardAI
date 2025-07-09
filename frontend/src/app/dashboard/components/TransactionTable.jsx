@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Eye, ShieldX, Check } from "lucide-react";
-import { transactions as rawTransactions } from "./data";
+import { transactions as rawTransactions } from "../../../components/data";
 import TransactionModal from "./TransactionModal";
 import {
   searchTransactions,

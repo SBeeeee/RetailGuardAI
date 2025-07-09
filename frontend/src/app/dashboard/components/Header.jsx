@@ -1,5 +1,5 @@
 import { AlertTriangle, ShieldX, CheckCircle, BarChart } from "lucide-react";
-import { stats } from "./data";
+import { stats } from "../../../components/data";
 export default function Header() {
   return (
     <div className="grid grid-cols-4 gap-4 mb-6">
