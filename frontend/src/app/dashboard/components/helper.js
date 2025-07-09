@@ -33,3 +33,7 @@ export const searchTransactions = (transactions, query) => {
     return transactions.slice(startIndex, endIndex);
   };
   
+  export const getTotalPages = (transactions, limit) => {
+    return Math.ceil(transactions.length / limit);
+  };
+  
